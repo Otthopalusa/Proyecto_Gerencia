@@ -32,7 +32,7 @@ export default async function OrderPage({params} : { params : {slug : string}}) 
     <>
         <div className="flex bg-neutral-800 gap-3 p-1 mb-4 rounded-sm items-center justify-evenly">
             <Image height={100} width={100} src="/menu.png" alt="logo menu"/>
-            <h2 className="title-menu my-4 text-xl font-bold text-white">Restaurante chino menu {category[0].name}</h2>
+            <h2 className="title-menu my-4 text-xl font-bold text-white">Restaurante chino menu {category[0]?.name}</h2>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4 items-start">
             

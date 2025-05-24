@@ -6,6 +6,11 @@ const prisma = new PrismaClient();
 
 async function main() {
     try {
+        // Primero insertar categorías
+        await prisma.category.createMany({
+            data: categories
+        })
+        // Luego insertar productos
         await prisma.product.createMany({
             data: products
         })

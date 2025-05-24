@@ -21,7 +21,7 @@ export const categories = [
     },
     {
         name: "Adicionales",
-        slug: "",
+        slug: "rice",
     },
     {
         name: "Chow Fan (Arroz Frito)",

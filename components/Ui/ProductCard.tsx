@@ -24,7 +24,7 @@ export default function ProductCard({product} : ProductCardProps) {
     const handleCheckedHalfPrice = (event: React.ChangeEvent<HTMLInputElement>) => {
         setIsChecked({ ...isChecked, halfPrice: event.target.checked });
     };
-
+    
     const imagePath = getImagePath(product.image)
     return (
     <>
@@ -32,7 +32,7 @@ export default function ProductCard({product} : ProductCardProps) {
             <CustomImages imgSrc={imagePath} pt="90%"/>
             <div className="absolute top-0 left-0 w-full">
                 <div className="relative">
-                    <div className="absolute top-[calc(90% - 30px)] right-4 z-30">
+                    <div className="absolute top-[calc(90% - 30px)] left-4 z-30">
                         {product.availability ? (
                             <Image className="rounded-full bg-white shadow-md border-2 border-white" width={60} height={60} src="/icons/check.png" alt="available"/>
                         ):(
@@ -40,9 +40,9 @@ export default function ProductCard({product} : ProductCardProps) {
                         )}
                     </div>
                 </div>
-            </div>
+            </div>
             <div className="info-product p-4">
-                
+                <div className="h-[30px]"></div>
                 <h3 className="text-2xl font-black">{product.name}</h3>
                 <p className="description h-0 overflow-hidden duration-300">{product.description}</p>
                 <div className="flex justify-around">

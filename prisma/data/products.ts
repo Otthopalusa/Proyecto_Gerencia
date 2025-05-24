@@ -7,7 +7,7 @@ export const products = [
             halfPrice: 0,
             availability: true,
             image: "el wok dorado (21)",
-            categoryId: 2,
+            categoryId: 15, // Junior
         },
         {
             name: "Menu Junior Pechuga",
@@ -16,7 +16,7 @@ export const products = [
             halfPrice: 0,
             availability: true,
             image: "el wok dorado (21)",
-            categoryId: 2,
+            categoryId: 15, // Junior
         },
         {
             name: "Menu Junior Lomo Cerdo",
@@ -25,7 +25,7 @@ export const products = [
             halfPrice: 0,
             availability: true,
             image: "el wok dorado (21)",
-            categoryId: 2,
+            categoryId: 15, // Junior
         },
         {
             name: "Menu Junior Bolitas Agridulces",
@@ -34,7 +34,7 @@ export const products = [
             halfPrice: 0,
             availability: true,
             image: "el wok dorado (21)",
-            categoryId: 2,
+            categoryId: 15, // Junior
         },
         {
             name: "Menu Junior Churrasquillo",
@@ -43,7 +43,7 @@ export const products = [
             halfPrice: 0,
             availability: true,
             image: "el wok dorado (21)",
-            categoryId: 2,
+            categoryId: 15, // Junior
         },
     
     //MENUS PERSONALES

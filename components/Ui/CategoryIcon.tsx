@@ -10,7 +10,6 @@ type CategoryIconProps = {
 
 export default function CategoryIcon({category} : CategoryIconProps) {
     const params = useParams<{slug : string}>()
-    console.log(params)
     return (
     <>
         <Link href={`/order/${category.slug}`} className={`${category.slug === params.slug ? 'bg-yellow-600': ''} flex items-center gap-4 w-full border-t border-gray-200 p-3 last-of-type:border-b font-bold pl-3 text-xl hover:bg-yellow-600 relative link-category`}>
