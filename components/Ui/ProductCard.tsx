@@ -28,14 +28,21 @@ export default function ProductCard({product} : ProductCardProps) {
     const imagePath = getImagePath(product.image)
     return (
     <>
-        <div className="rounded-lg overflow-hidden shadow-lg bg-white hover:shadow-2xl duration-500 card">
+        <div className="rounded-lg overflow-hidden shadow-lg bg-white hover:shadow-2xl duration-500 card relative">
             <CustomImages imgSrc={imagePath} pt="90%"/>
+            <div className="absolute top-0 left-0 w-full">
+                <div className="relative">
+                    <div className="absolute top-[calc(90% - 30px)] right-4 z-30">
+                        {product.availability ? (
+                            <Image className="rounded-full bg-white shadow-md border-2 border-white" width={60} height={60} src="/icons/check.png" alt="available"/>
+                        ):(
+                            <Image className="rounded-full bg-white shadow-md border-4 border-white" width={60} height={60} src="/icons/no-check.png" alt="not available"/>
+                        )}
+                    </div>
+                </div>
+            </div>
             <div className="info-product p-4">
-                {product.availability ? (
-                    <Image className=" rounded-full bg-white shadow-md -mt-14 border-2 border-white" width={60} height={60} src="/icons/check.png" alt="available"/>
-                ):(
-                    <Image className=" rounded-full bg-white shadow-md -mt-14 border-4 border-white" width={60} height={60} src="/icons/no-check.png" alt="available"/>
-                )}
+                
                 <h3 className="text-2xl font-black">{product.name}</h3>
                 <p className="description h-0 overflow-hidden duration-300">{product.description}</p>
                 <div className="flex justify-around">
