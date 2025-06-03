@@ -2,6 +2,17 @@ import AddProductForm from "@/components/products/AddProductForm"
 import ProductForm from "@/components/products/ProductForm"
 import Image from "next/image"
 
+/**
+ * Página de creación de nuevos productos.
+ *
+ * Esta vista permite al administrador registrar un nuevo producto
+ * en el sistema del restaurante. Se compone de un formulario general
+ * (`ProductForm`) envuelto dentro de `AddProductForm`, que maneja
+ * la lógica adicional para agregar un producto.
+ *
+ * @component
+ * @returns {JSX.Element} Componente de la página para registrar un nuevo producto.
+ */
 export default function CreateProductsPage() {
     return (
     <>

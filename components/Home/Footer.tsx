@@ -3,6 +3,14 @@ import { faEnvelope, faPhone, faLocationDot } from "@fortawesome/free-solid-svg-
 import { faFacebook, faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons"
 import Image from "next/image"
 
+/**
+ * Componente Footer
+ *
+ * Este componente representa el pie de página del sitio web "El Wok Dorado".
+ * Contiene información de contacto, redes sociales y un breve mensaje promocional.
+ *
+ * @returns JSX.Element que representa el footer completo con estilos y enlaces.
+ */
 export default function Footer() {
     return (
     <footer className="flex sm:flex-row flex-col justify-evenly gap-2 bg-zinc-900 p-6 text-white">

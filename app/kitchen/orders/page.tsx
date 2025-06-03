@@ -3,9 +3,22 @@ import OrderCard from "@/components/order/OrderCard"
 import { OrderWithProducts } from "@/src/types"
 import Image from "next/image"
 import useSWR from "swr"
-
+/**
+ * Página de visualización de órdenes pendientes para la cocina del restaurante Wok Dorado.
+ *
+ * Esta página consulta el endpoint `/kitchen/orders/api` cada 60 segundos para obtener
+ * las órdenes con estado `false`, es decir, aún no completadas.
+ *
+ * Utiliza SWR para gestionar la obtención de datos de forma eficiente.
+ *
+ * @returns Un componente React que lista las órdenes pendientes.
+ */
 export default function OrderPendingPage() {
     const url = '/kitchen/orders/api'
+    /**
+     * Función fetcher que recupera los datos desde la API.
+     * @returns Promesa con los datos de las órdenes.
+     */
     const fetcher = () => fetch(url).then(res => res.json()).then(data => data)
     const {data, error, isLoading} = useSWR<OrderWithProducts[]>(url, fetcher, {
         refreshInterval: 60000

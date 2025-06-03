@@ -1,3 +1,12 @@
+/**
+ * Componente Pay
+ *
+ * Muestra la sección de medios de pago digitales disponibles para el restaurante El Wok Dorado.
+ * Presenta dos opciones principales: pago vía Nequi y pago vía Daviplata, cada una con su teléfono
+ * y código QR para facilitar la compra digital.
+ *
+ * @returns JSX.Element que representa la sección de medios de pago digitales
+ */
 export default function Pay() {
     return (
     <>

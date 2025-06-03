@@ -4,7 +4,16 @@ import OrderSideBar from "@/components/kitchen/OrderSideBar";
 import ToastNotification from "@/components/Ui/ToastNotification";
 import { linksHome } from "@/Data";
 
-
+/**
+ * Layout principal de la sección de cocina.
+ *
+ * Este componente proporciona la estructura base para las páginas dentro de la ruta `/kitchen`.
+ * Incluye un `Navbar`, una barra lateral (`OrderSideBar`) específica para cocina y un contenedor principal para renderizar contenido.
+ * También incorpora `ToastNotification` para mostrar alertas al usuario.
+ *
+ * @param children - Elementos hijos que se renderizarán dentro del layout.
+ * @returns Estructura del layout para las vistas de cocina.
+ */
 export default async function AdminLayout({
     children,
 }: Readonly<{

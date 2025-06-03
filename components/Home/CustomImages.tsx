@@ -1,3 +1,18 @@
+/**
+ * Componente `CustomImages`
+ *
+ * Renderiza una imagen responsiva con proporción de aspecto personalizada utilizando el componente `Image` de Next.js.
+ * Este componente es útil para mostrar imágenes en galerías o layouts en cuadrícula, respetando proporciones uniformes.
+ *
+ * @param {CustomImagesProps} props - Propiedades del componente
+ * @param {string} props.imgSrc - Ruta de la imagen que se va a renderizar
+ * @param {string} props.pt - Valor del `padding-top` para mantener la proporción de aspecto (por ejemplo: "75%")
+ *
+ * @returns {JSX.Element} Imagen optimizada con estilo personalizado
+ *
+ * @example
+ * <CustomImages imgSrc="/img/image_1.png" pt="85%" />
+ */
 import Image from "next/image"
 type CustomImagesProps = {
     imgSrc: string

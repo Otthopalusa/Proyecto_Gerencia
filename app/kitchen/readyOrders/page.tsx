@@ -2,6 +2,14 @@ import ReadyOrderTable from "@/components/kitchen/ReadyOrderTable"
 import { prisma } from "@/src/lib/prisma"
 import Image from "next/image"
 
+/**
+ * Obtiene todas las órdenes completadas de la base de datos.
+ *
+ * Las órdenes con `status: true` son consideradas listas para entregar.
+ * Incluye los productos asociados a cada orden.
+ *
+ * @returns Lista de órdenes completadas con sus productos.
+ */
 async function getReadyOrders() {
     const orders = await prisma.order.findMany({
         where : {
@@ -17,7 +25,13 @@ async function getReadyOrders() {
     })
     return orders
 }
-
+/**
+ * Página para visualizar todas las órdenes completadas en la cocina del restaurante.
+ *
+ * Esta vista se usa para mostrar las órdenes listas para ser entregadas a los clientes.
+ *
+ * @returns Componente que renderiza el título y la tabla de órdenes completas.
+ */
 export default async function OrderReadyPage() {
     const orders = await getReadyOrders()
     return (

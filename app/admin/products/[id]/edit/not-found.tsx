@@ -1,6 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
 
+/**
+ * Componente que muestra una pantalla de "Producto no encontrado" para la sección de administración.
+ *
+ * Renderiza un mensaje visual con un ícono y un botón que redirige a la lista de productos.
+ *
+ * @returns JSX.Element que representa la vista de producto no encontrado.
+ */
 export default function NotFound() {
     return (
     <div>

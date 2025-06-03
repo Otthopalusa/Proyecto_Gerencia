@@ -1,3 +1,22 @@
+/**
+ * Componente `AboutSection`
+ *
+ * Sección descriptiva del restaurante "El Wok Dorado" utilizada en la página principal.
+ * Muestra una breve descripción del negocio y una galería de imágenes representativas.
+ *
+ * Contiene:
+ * - Un título principal.
+ * - Un párrafo de introducción sobre el restaurante.
+ * - Un botón para más información.
+ * - Una galería de 9 imágenes cargadas desde `/img/image_X.png`.
+ *
+ * Este componente utiliza el componente hijo `CustomImages` para renderizar cada imagen de la galería.
+ *
+ * @returns {JSX.Element} JSX que representa la sección "Sobre nosotros".
+ *
+ * @example
+ * <AboutSection />
+ */
 import CustomImages from "./CustomImages";
 
 export default function AboutSection() {

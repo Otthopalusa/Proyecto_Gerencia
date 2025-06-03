@@ -1,4 +1,12 @@
-
+/**
+ * Componente Visuals
+ *
+ * Renderiza una cuadrícula de iconos e imágenes que representan características
+ * destacadas del restaurante El Wok Dorado, como ubicación, servicio rápido,
+ * ingredientes frescos y ambiente acogedor.
+ *
+ * @returns JSX.Element que muestra las características visuales del restaurante
+ */
 export default function Visuals() {
     return (
     <>

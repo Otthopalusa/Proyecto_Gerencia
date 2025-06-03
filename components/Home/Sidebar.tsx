@@ -5,14 +5,34 @@ import Link from "next/link";
 import Image from "next/image";
 
 type SidebarProps = {
+    /**
+     * Array de objetos que representan los enlaces a mostrar en la barra lateral.
+     * Cada enlace incluye:
+     * - `name`: nombre o texto que se mostrará.
+     * - `path`: ruta a la que redirige el enlace.
+     * - `icon`: icono de FontAwesome que acompaña el texto.
+     */
     links: {
         name: string;
         path: string;
         icon: IconDefinition;
     }[]
+    /**
+     * Ruta actual para comparar y establecer el enlace activo.
+     */
+
     pathname: string
 }
 
+/**
+ * Componente Sidebar
+ *
+ * Renderiza una barra lateral fija con animación que muestra un logo y una lista de enlaces.
+ * Cada enlace se representa con un icono y texto, y se destaca si coincide con la ruta actual.
+ *
+ * @param {SidebarProps} props - Propiedades del componente
+ * @returns JSX.Element que representa la barra lateral
+ */
 export default function Sidebar({links, pathname} : SidebarProps) {
     return (
     <>

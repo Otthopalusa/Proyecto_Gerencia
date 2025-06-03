@@ -3,7 +3,15 @@ import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons"
 import Link from "next/link"
 import 'animate.css'
 
-
+/**
+ * Componente HeroSection
+ *
+ * Sección destacada principal para la página de inicio.
+ * Presenta una imagen con animación, un mensaje de bienvenida,
+ * una frase destacada con íconos decorativos y un botón para realizar pedidos.
+ *
+ * @returns JSX.Element que representa la sección Hero con estilos y animaciones.
+ */
 export default function HeroSection() {
     return (
     <>

@@ -7,10 +7,25 @@ import Image from "next/image"
 
 
 type NavbarProps = {
+    /**
+     * Array de enlaces para mostrar en la barra de navegación
+     */
     links : LinkType[]
+    /**
+     * Ruta actual para determinar el enlace activo
+     */
     pathname : string
 }
 
+/**
+ * Componente Navbar
+ *
+ * Barra de navegación principal que muestra el logo, enlaces de navegación
+ * y un botón para mostrar/ocultar el sidebar en dispositivos móviles.
+ *
+ * @param {NavbarProps} props - Propiedades del componente
+ * @returns JSX.Element que representa la barra de navegación
+ */
 export default function Navbar( {links, pathname} : NavbarProps ) {
     const [showSidebar, setShowSidebar] = useState(false)
     return (

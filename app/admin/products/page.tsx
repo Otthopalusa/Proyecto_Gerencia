@@ -6,10 +6,21 @@ import Image from "next/image"
 import Link from "next/link"
 import ProductSearchForm from "@/components/products/ProductSearchForm"
 
+/**
+ * Obtiene el número total de productos almacenados en la base de datos.
+ *
+ * @returns {Promise<number>} Cantidad total de productos.
+ */
 async function productCount(){
     return await prisma.product.count()
 }
-
+/**
+ * Obtiene un subconjunto de productos paginados desde la base de datos.
+ *
+ * @param {number} page - Página actual solicitada.
+ * @param {number} pageSize - Número de productos por página.
+ * @returns {Promise<any[]>} Lista de productos con su categoría asociada.
+ */
 async function getProducts(page: number, pageSize: number) {
     const skip = (page - 1) * pageSize
     const products = await prisma.product.findMany({
@@ -23,6 +34,17 @@ async function getProducts(page: number, pageSize: number) {
     return products
 }
 
+/**
+ * Página de administración de productos.
+ *
+ * Muestra un listado paginado de los productos registrados en el sistema,
+ * con la posibilidad de buscar, crear o editar productos.
+ *
+ * @component
+ * @param {Object} props - Parámetros de búsqueda de la URL.
+ * @param {Object} props.searchParams - Objeto con parámetros de búsqueda, incluyendo `page`.
+ * @returns {JSX.Element} Página de productos.
+ */
 export default async function ProductsPage({searchParams} : {searchParams : {page: string}}) {
     const page = +searchParams.page || 1
     const pageSize = 10
